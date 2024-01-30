@@ -1,15 +1,10 @@
-def two_sum(nums, target)
-  num_indices = {}
-
-  nums.each_with_index do |num, index|
-    complement = target - num
-    return [num_indices[complement], index] if num_indices[complement]
-
-    num_indices[num] = index
-  end
+def merge(nums1, m, nums2, n)
+  nums1.replace((nums1[0...m] + nums2).sort)
 end
 
-# Example usage:
-puts two_sum([2, 7, 11, 15], 9)  # Output: [0, 1]
-puts two_sum([3, 2, 4], 6)       # Output: [1, 2]
-puts two_sum([3, 3], 6)           # Output: [0, 1]
+
+nums1 = [0], m = 0, nums2 = [1], n = 1
+
+merge(nums1, m, nums2, n)
+result_array = nums1.take(m + n)
+puts result_array
