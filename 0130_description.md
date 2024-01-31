@@ -25,3 +25,6 @@ console.log(months);
 // Expected output: Array ["Jan", "Feb", "March", "April", "June"]
 ```
 
+---
+
+參考來源：(mdn)[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/slice]
