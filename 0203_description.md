@@ -68,4 +68,4 @@ function longestCommonPrefix(strs) {
 }
 ```
 
-`JS`的寫法和`Ruby`差不多，可以使用`.every`來確保是否為相同字母
+`JS`的寫法和`Ruby`差不多，可以使用`.every`來確保是否為相同字母，其他解法就和`Ruby`和`Python`類似，差別在使用`for (let i = 0; i < firstStr.length; i++)`迴圈，並使用`str[i]`來比對文字是否相符，最後也完成解答！
