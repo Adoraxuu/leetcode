@@ -5,7 +5,7 @@ def majority_element(nums)
   nums.tally.max_by {|key, value| value }[0]
 end
 ```
-這裡使用了(tally)[https://rubyapi.org/3.3/o/s?q=tally]
+這裡使用了[tally](https://rubyapi.org/3.3/o/s?q=tally)
 
 在Ruby API的解釋為：
 ```
