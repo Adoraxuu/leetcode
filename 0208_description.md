@@ -1,30 +1,36 @@
-[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-125. Valid Palindrome
-Solved
-Easy
-Topics
-Companies
-A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+這個問題要求判斷句子是否為回文。在進行比較時，會需要先將所有字母轉換為小寫，並去除所有非字母和數字。然後，比較處理過的字串是否和它的反轉相等。
 
-Given a string s, return true if it is a palindrome, or false otherwise.
 
- 
+## Ruby
+```ruby
+def is_palindrome(s)
+  clean_s = s.downcase.gsub(/[^a-z0-9]/, '')
+  clean_s == clean_s.reverse
+end
+```
+使用`downcase`將字符轉換為小寫，再使用`gsub`去除非字母和數字的字，最後比較反轉是否相同就完成了～
 
-Example 1:
+## Python
+```python
+def is_palindrome(s):
+    # 將字符轉換為小寫，去除非字母和數字的字
+    clean_s = ''.join(char.lower() for char in s if char.isalnum())
+    # 比較處理過的字串和它的反轉是否相等
+    return clean_s == clean_s[::-1]
+```
 
-Input: s = "A man, a plan, a canal: Panama"
-Output: true
-Explanation: "amanaplanacanalpanama" is a palindrome.
-Example 2:
+`isalnum()`方法用於檢查字符串中的所有字是否都是字母和數字。如果是，該方法返回 True，表示所有字符均為字母（a-z、A-Z）和數字（0-9）。反之，如果字符串中包含非字母和非數字的字符，例如空格、驚嘆號、井號、百分號、和問號等，該方法將返回 False。
 
-Input: s = "race a car"
-Output: false
-Explanation: "raceacar" is not a palindrome.
-Example 3:
+使用這個方法就不用使用`gsub`取代了，因為只有是字母和數字才會放進`clean_s`裡
 
-Input: s = " "
-Output: true
-Explanation: s is an empty string "" after removing non-alphanumeric characters.
-Since an empty string reads the same forward and backward, it is a palindrome.
+## JavaScript
+```js
+function isPalindrome(s) {
+  // 將字串轉換為小寫，去除非字母和數字
+  const cleanS = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  // 比較處理過的字符串和它的反轉是否相等
+  return cleanS === cleanS.split('').reverse().join('');
+}
+```
  
 
