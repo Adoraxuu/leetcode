@@ -32,6 +32,8 @@ end
 `result = ('A'.ord + column_number % 26).chr + result`
 這段的`ord`是將字母轉換為`ASCII`，因為每個字母都是按照順序排序，所以中間的差數就是`'A'.ord`，最後再使用`.chr`轉為數字，最後 `+ result`更新`result`的數，並確保下一個`result`會放在前面
 
+接著最後再將輸入值`/26`來處理下一位數（真的和十進位轉二進位蠻像的～）
+
 ## Python
 ```python
 class Solution:
@@ -44,6 +46,8 @@ class Solution:
         return result
 
 ```
+Python和Ruby的解法相同，只要改變寫法即可！
+
 ## JavaScript
 ```js
 function convertToTitle(columnNumber) {
@@ -56,3 +60,7 @@ function convertToTitle(columnNumber) {
     return result;
 }
 ```
+
+JS也和Ruby的解法相同，只要改變寫法即可！
+今天就到這裡～明天繼續加油！
+
