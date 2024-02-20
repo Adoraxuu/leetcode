@@ -13,12 +13,11 @@ Ruby的`step`有一個有趣的地方，只要範圍不對的話，就會回傳0
 ## Python
 ```py
 def sequence_sum(begin_number, end_number, step):
-    if begin_number > end_number:
-        return 0
-    else:
-        return sum(range(begin_number, end_number, step))
+    return sum(range(begin_number, end_number + 1, step))
 ```
 和`ruby`不一樣的地方是，`python`的`Range`如果是`range(1,4)`，出現的結果會是`[1,2,3]`並不會包含最後一位數，所以這裡需要`+1`
+
+而Python和Ruby一樣，如果加總的範圍不對的話會回傳`0`，像是我輸入`begin_number`為12，`end_number`為2、`step`為2，明顯範圍不對即會回傳`0`，因此不需要額外填寫判斷式
 
 ## JavaScript
 ```js
